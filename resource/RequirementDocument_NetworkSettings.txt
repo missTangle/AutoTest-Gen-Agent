@@ -1,0 +1,13 @@
+Version: v1.0 | Module: System Settings
+1. Functional Overview
+The "Network & Internet" page allows users to manage connectivity, including Wi-Fi, SIM cards, and Airplane mode.
+2. UI Elements & Layout (English UI)
+Element Name	Type	Description	Expected Location
+Network & internet	List Item	Entry point from main Settings.	Middle of the screen
+Internet	List Item	Shows Wi-Fi status (e.g., "Connected", "Saved").	Top of the sub-page
+Airplane mode	Switch	Toggle to disable all wireless signals.	Middle of the sub-page
+Hotspot & tethering	List Item	Entry to share mobile data via Wi-Fi/BT.	Bottom of the sub-page
+3. Acceptance Criteria (AC)
+- AC1: Clicking "Network & internet" must navigate to the sub-page.
+- AC2: The "Airplane mode" switch must be toggled to ON (Blue) or OFF (Gray) upon clicking.
+- AC3: If Wi-Fi is disabled, the "Internet" item should display "Off".

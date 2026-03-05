@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>Generated Test Cases</title>
+  </head>
+  <body>
+    <outline text="模块：网络与互联网设置">
+      <outline text="场景：主入口导航与页面布局">
+        <outline text="TC-01：正常进入网络与互联网设置页面">
+          <outline text="前置条件: 手机处于设置主页面"/>
+          <outline text="操作步骤:"/>
+          <outline text="1. - [滑动] 屏幕，查找文本 &quot;Network &amp; internet&quot;"/>
+          <outline text="2. - [点击] 文本 &quot;Network &amp; internet&quot;"/>
+          <outline text="预期结果:"/>
+          <outline text="1. - [断言] 页面标题显示 &quot;Network &amp; internet&quot;"/>
+          <outline text="2. - [断言] 页面顶部显示文本 &quot;Internet&quot;"/>
+          <outline text="3. - [断言] 页面中部显示开关 &quot;Airplane mode&quot;"/>
+          <outline text="4. - [断言] 页面底部显示文本 &quot;Hotspot &amp; tethering&quot;"/>
+        </outline>
+        <outline text="TC-02：验证页面元素显示顺序">
+          <outline text="前置条件: 已进入网络与互联网设置页面"/>
+          <outline text="操作步骤:"/>
+          <outline text="1. - [断言] 文本 &quot;Internet&quot; 位于屏幕顶部"/>
+          <outline text="2. - [断言] 开关 &quot;Airplane mode&quot; 位于页面中部"/>
+          <outline text="3. - [断言] 文本 &quot;Hotspot &amp; tethering&quot; 位于页面底部"/>
+          <outline text="预期结果:"/>
+          <outline text="- [断言] 所有UI元素按照文档描述的顺序显示"/>
+        </outline>
+      </outline>
+      <outline text="场景：互联网（Wi-Fi）状态显示">
+        <outline text="TC-03：Wi-Fi已连接状态显示">
+          <outline text="前置条件: Wi-Fi功能已开启且已连接到网络"/>
+          <outline text="操作步骤:"/>
+          <outline text="1. - [点击] 文本 &quot;Network &amp; internet&quot; 进入设置页"/>
+          <outline text="2. - [点击] 文本 &quot;Internet&quot;"/>
+          <outline text="预期结果:"/>
+          <outline text="- [断言] &quot;Internet&quot; 项目显示 &quot;Connected&quot; 或具体网络名称"/>
+        </outline>
+        <outline text="TC-04：Wi-Fi已保存但未连接状态显示">
+          <outline text="前置条件: Wi-Fi功能已开启，有保存的网络但未连接"/>
+          <outline text="操作步骤:"/>
+          <outline text="1. - [点击] 文本 &quot;Network &amp; internet&quot; 进入设置页"/>
+          <outline text="2. - [点击] 文本 &quot;Internet&quot;"/>
+          <outline text="预期结果:"/>
+          <outline text="- [断言] &quot;Internet&quot; 项目显示 &quot;Saved&quot;"/>
+        </outline>
+        <outline text="TC-05：Wi-Fi关闭状态显示">
+          <outline text="前置条件: Wi-Fi功能已关闭"/>
+          <outline text="操作步骤:"/>
+          <outline text="1. - [点击] 文本 &quot;Network &amp; internet&quot; 进入设置页"/>
+          <outline text="2. - [断言] &quot;Internet&quot; 项目显示 &quot;Off&quot;"/>
+          <outline text="预期结果:"/>
+          <outline text="- [断言] &quot;Internet&quot; 项目准确显示 &quot;Off&quot; 状态"/>
+        </outline>
+      </outline>
+      <outline text="场景：飞行模式开关控制">
+        <outline text="TC-06：正常开启飞行模式">
+          <outline text="前置条件: 飞行模式当前为关闭状态"/>
+          <outline text="操作步骤:"/>
+          <outline text="1. - [点击] 文本 &quot;Network &amp; internet&quot; 进入设置页"/>
+          <outline text="2. - [点击] &quot;Airplane mode&quot; 开关"/>
+          <outline text="预期结果:"/>
+          <outline text="1. - [断言] &quot;Airplane mode&quot; 开关变为 ON 状态（蓝色）"/>
+          <outline text="2. - [断言] 状态栏显示飞行模式图标"/>
+        </outline>
+        <outline text="TC-07：正常关闭飞行模式">
+          <outline text="前置条件: 飞行模式当前为开启状态"/>
+          <outline text="操作步骤:"/>
+          <outline text="1. - [点击] 文本 &quot;Network &amp; internet&quot; 进入设置页"/>
+          <outline text="2. - [点击] &quot;Airplane mode&quot; 开关"/>
+          <outline text="预期结果:"/>
+          <outline text="1. - [断言] &quot;Airplane mode&quot; 开关变为 OFF 状态（灰色）"/>
+          <outline text="2. - [断言] 状态栏飞行模式图标消失"/>
+        </outline>
+        <outline text="TC-08：开关状态视觉反馈">
+          <outline text="前置条件: 已进入网络与互联网设置页面"/>
+          <outline text="操作步骤:"/>
+          <outline text="1. - [断言] &quot;Airplane mode&quot; 开关显示当前正确状态"/>
+          <outline text="预期结果:"/>
+          <outline text="- [断言] ON 状态为蓝色，OFF 状态为灰色"/>
+        </outline>
+      </outline>
+      <outline text="场景：热点与网络共享入口">
+        <outline text="TC-09：进入热点与网络共享设置">
+          <outline text="前置条件: 已进入网络与互联网设置页面"/>
+          <outline text="操作步骤:"/>
+          <outline text="1. - [点击] 文本 &quot;Hotspot &amp; tethering&quot;"/>
+          <outline text="预期结果:"/>
+          <outline text="- [断言] 成功跳转到热点与网络共享设置页面"/>
+        </outline>
+      </outline>
+      <outline text="场景：异常路径与边界值">
+        <outline text="TC-10：Wi-Fi状态变化实时更新">
+          <outline text="前置条件: 已进入网络与互联网设置页面，Wi-Fi为开启状态"/>
+          <outline text="操作步骤:"/>
+          <outline text="1. - [滑动] 离开当前页面到设置主页"/>
+          <outline text="2. - 通过快捷设置关闭Wi-Fi"/>
+          <outline text="3. - [点击] 返回文本 &quot;Network &amp; internet&quot;"/>
+          <outline text="4. - [断言] &quot;Internet&quot; 项目显示 &quot;Off&quot;"/>
+          <outline text="预期结果:"/>
+          <outline text="- [断言] Wi-Fi状态变化后，页面显示实时更新"/>
+        </outline>
+        <outline text="TC-11：飞行模式下Wi-Fi状态显示">
+          <outline text="前置条件: 飞行模式已开启"/>
+          <outline text="操作步骤:"/>
+          <outline text="1. - [点击] 文本 &quot;Network &amp; internet&quot; 进入设置页"/>
+          <outline text="2. - [断言] &quot;Internet&quot; 项目显示 &quot;Off&quot;"/>
+          <outline text="预期结果:"/>
+          <outline text="- [断言] 飞行模式下Wi-Fi自动关闭并正确显示状态"/>
+        </outline>
+        <outline text="TC-12：页面元素点击反馈">
+          <outline text="前置条件: 已进入网络与互联网设置页面"/>
+          <outline text="操作步骤:"/>
+          <outline text="1. - [点击] 页面空白区域"/>
+          <outline text="2. - [点击] 状态栏"/>
+          <outline text="3. - [点击] 返回按钮"/>
+          <outline text="预期结果:"/>
+          <outline text="1. - [断言] 点击空白区域无异常反应"/>
+          <outline text="2. - [断言] 点击状态栏展开通知面板"/>
+          <outline text="3. - [断言] 点击返回按钮返回上一页"/>
+        </outline>
+      </outline>
+    </outline>
+  </body>
+</opml>
