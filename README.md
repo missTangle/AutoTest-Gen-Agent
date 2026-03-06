@@ -13,8 +13,31 @@
 - **工程化流水线 (Pipeline)**：全自动化工具链，一键产出符合工业评审标准的 XMind/OPML 导图，支持快速落盘与环境隔离。
 
 ---
-## 📊 Results & Visualization
+## 🚀 运行效果与交付物 (Execution & Results)
+1. Agent 执行汇报 (Execution Logs)
+、、、markdown
+当执行指令 `分析 [需求], 出导图` 后，Agent 会产出如下标准汇报：
 
+> ### 🤖 执行汇报 (TestCase-JSON-Engine v2.0)
+> **✅ 全流程完成！**
+> 
+> | 产物类型 | 文件路径 | 用途 |
+> | :--- | :--- | :--- |
+> | 📄 JSON 数据 | `output/TC_NightMode_20260305.json` | 单一事实源 |
+> | 🧠 OPML 导图 | `output/TC_NightMode_20260305.opml` | XMind 导入 |
+> | 📝 MD 文档 | `output/TC_NightMode_20260305.md` | 标准测试用例 |
+>
+> **SOP 状态：** 逻辑审计 ✅ | 结构化生成 ✅ | 转换渲染 ✅
+>
+> **用例树预览：**
+> ```text
+> └── 系统设置 - 夜间模式
+>     ├── 夜间模式基础功能 (2 用例)
+>     ├── 夜间模式与自动亮度交互 (3 用例)
+>     └── ... (更多详见导图)
+> ```
+
+3. 多维度产物交付 (Multi-format Outputs)
 <img width="2292" height="1514" alt="image" src="https://github.com/user-attachments/assets/d3905b80-ec6a-49f3-aa57-5cd661f26951" />
 
 ---
@@ -73,7 +96,7 @@
 ```text
 .
 ├── skills/
-│   └── testcase_agent_json.md.md      # 核心 Agent Skill 定义文件
+│   └── testcase_agent_v1.5.md        # 核心 Agent Skill 定义文件
 ├── scripts/
 │   └── json_to_opml.py               # JSON 转 OPML 核心转换脚本
 │   └── json_to_markdown.py           
