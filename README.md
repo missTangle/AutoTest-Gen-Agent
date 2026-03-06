@@ -23,9 +23,9 @@
 > 
 > | 产物类型 | 文件路径 | 用途 |
 > | :--- | :--- | :--- |
-> | 📄 JSON 数据 | `output/TC_NightMode_20260305.json` | 单一事实源 |
-> | 🧠 OPML 导图 | `output/TC_NightMode_20260305.opml` | XMind 导入 |
-> | 📝 MD 文档 | `output/TC_NightMode_20260305.md` | 标准测试用例 |
+> | 📄 JSON 数据 | `output/TC_NightMode_20260105.json` | 单一事实源 |
+> | 🧠 OPML 导图 | `output/TC_NightMode_20260105.opml` | XMind 导入 |
+> | 📝 MD 文档 | `output/TC_NightMode_20260105.md` | 标准测试用例 |
 >
 > **SOP 状态：** 逻辑审计 ✅ | 结构化生成 ✅ | 转换渲染 ✅
 >
