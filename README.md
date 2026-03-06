@@ -13,6 +13,11 @@
 - **工程化流水线 (Pipeline)**：全自动化工具链，一键产出符合工业评审标准的 XMind/OPML 导图，支持快速落盘与环境隔离。
 
 ---
+## 📊 Results & Visualization
+
+<img width="2292" height="1514" alt="image" src="https://github.com/user-attachments/assets/d3905b80-ec6a-49f3-aa57-5cd661f26951" />
+
+---
 
 ### 🛡️ 质量保障：Audit Mode 产出示例
 当 PRD 逻辑复杂时，工具会自动生成审计报告：
@@ -68,9 +73,10 @@
 ```text
 .
 ├── skills/
-│   └── testcase_agent_v1.5.md      # 核心 Agent Skill 定义文件
+│   └── testcase_agent_json.md.md      # 核心 Agent Skill 定义文件
 ├── scripts/
-│   └── md_to_opml.py               # Markdown 转 OPML 核心转换脚本
+│   └── json_to_opml.py               # JSON 转 OPML 核心转换脚本
+│   └── json_to_markdown.py           
 ├── resource/
 │   └── universal_checklist.txt     # 通用测试经验库 (RAG 数据源)
 ├── output/                         # 默认生成产物存放目录
