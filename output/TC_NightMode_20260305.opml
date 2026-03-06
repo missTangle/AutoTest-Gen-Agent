@@ -1,0 +1,173 @@
+<?xml version="1.0" ?>
+<opml version="2.0">
+  <head>
+    <title>系统设置 - 夜间模式</title>
+  </head>
+  <body>
+    <outline text="系统设置 - 夜间模式">
+      <outline text="夜间模式基础功能">
+        <outline text="TC-01: 开启夜间模式 - 主题切换为深色">
+          <outline text="前置条件">
+            <outline text="手机处于系统设置页面"/>
+            <outline text="当前系统主题为浅色模式"/>
+            <outline text="&quot;自动亮度&quot;功能处于关闭状态"/>
+          </outline>
+          <outline text="操作步骤">
+            <outline text="[点击] 开关 &quot;夜间模式&quot;"/>
+          </outline>
+          <outline text="预期结果">
+            <outline text="系统主题立即变为深色"/>
+            <outline text="开关状态显示为&quot;已开启&quot;"/>
+          </outline>
+        </outline>
+        <outline text="TC-02: 关闭夜间模式 - 主题恢复为浅色">
+          <outline text="前置条件">
+            <outline text="手机处于系统设置页面"/>
+            <outline text="当前系统主题为深色模式（夜间模式已开启）"/>
+          </outline>
+          <outline text="操作步骤">
+            <outline text="[点击] 开关 &quot;夜间模式&quot;"/>
+          </outline>
+          <outline text="预期结果">
+            <outline text="系统主题恢复为浅色"/>
+            <outline text="开关状态显示为&quot;已关闭&quot;"/>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="夜间模式与自动亮度交互">
+        <outline text="TC-03: 开启夜间模式时自动亮度已开启 - 弹出提示">
+          <outline text="前置条件">
+            <outline text="手机处于系统设置页面"/>
+            <outline text="&quot;自动亮度&quot;功能处于开启状态"/>
+            <outline text="当前系统主题为浅色模式"/>
+          </outline>
+          <outline text="操作步骤">
+            <outline text="[点击] 开关 &quot;夜间模式&quot;"/>
+          </outline>
+          <outline text="预期结果">
+            <outline text="弹出提示框显示文本 &quot;建议关闭自动亮度以获得更好体验&quot;"/>
+            <outline text="系统主题变为深色"/>
+          </outline>
+        </outline>
+        <outline text="TC-04: 自动亮度关闭时开启夜间模式 - 无提示直接切换">
+          <outline text="前置条件">
+            <outline text="手机处于系统设置页面"/>
+            <outline text="&quot;自动亮度&quot;功能处于关闭状态"/>
+            <outline text="当前系统主题为浅色模式"/>
+          </outline>
+          <outline text="操作步骤">
+            <outline text="[点击] 开关 &quot;夜间模式&quot;"/>
+          </outline>
+          <outline text="预期结果">
+            <outline text="无弹窗提示"/>
+            <outline text="系统主题立即变为深色"/>
+          </outline>
+        </outline>
+        <outline text="TC-05: 关闭夜间模式时自动亮度状态不影响操作">
+          <outline text="前置条件">
+            <outline text="手机处于系统设置页面"/>
+            <outline text="&quot;自动亮度&quot;功能处于开启状态"/>
+            <outline text="夜间模式已开启（深色主题）"/>
+          </outline>
+          <outline text="操作步骤">
+            <outline text="[点击] 开关 &quot;夜间模式&quot; (提示仅在开启时触发)"/>
+          </outline>
+          <outline text="预期结果">
+            <outline text="无弹窗提示"/>
+            <outline text="系统主题恢复为浅色"/>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="异常边界与交互体验 [经验补遗]">
+        <outline text="TC-06: 连续快速点击开关 - 幂等性自检">
+          <outline text="前置条件">
+            <outline text="手机处于系统设置页面"/>
+            <outline text="当前系统主题为浅色模式"/>
+          </outline>
+          <outline text="操作步骤">
+            <outline text="[点击] 开关 &quot;夜间模式&quot; (连续 3 次（快速）)"/>
+          </outline>
+          <outline text="预期结果">
+            <outline text="系统应处理防抖，避免产生重复请求或逻辑错乱"/>
+            <outline text="最终主题状态一致"/>
+          </outline>
+        </outline>
+        <outline text="TC-07: 主题切换视觉反馈验证">
+          <outline text="前置条件">
+            <outline text="手机处于系统设置页面"/>
+          </outline>
+          <outline text="操作步骤">
+            <outline text="[点击] 开关 &quot;夜间模式&quot;"/>
+            <outline text="[断言] 屏幕视觉变化 (观察切换过程)"/>
+          </outline>
+          <outline text="预期结果">
+            <outline text="主题切换过程流畅，无明显闪烁"/>
+            <outline text="所有 UI 元素颜色适配深色/浅色主题"/>
+          </outline>
+        </outline>
+        <outline text="TC-08: 中断处理后状态一致性">
+          <outline text="前置条件">
+            <outline text="手机处于系统设置页面"/>
+            <outline text="夜间模式已开启（深色主题）"/>
+          </outline>
+          <outline text="操作步骤">
+            <outline text="[后台] 切换应用至后台"/>
+            <outline text="[等待] 5 秒"/>
+            <outline text="[前台] 返回应用"/>
+          </outline>
+          <outline text="预期结果">
+            <outline text="夜间模式状态保持一致（仍为开启状态）"/>
+            <outline text="系统主题仍为深色"/>
+          </outline>
+        </outline>
+        <outline text="TC-09: 极端文本显示 - 提示框内容完整性">
+          <outline text="前置条件">
+            <outline text="手机处于系统设置页面"/>
+            <outline text="&quot;自动亮度&quot;功能处于开启状态"/>
+            <outline text="系统语言设置为多国语言（如德语、日语等）"/>
+          </outline>
+          <outline text="操作步骤">
+            <outline text="[点击] 开关 &quot;夜间模式&quot;"/>
+          </outline>
+          <outline text="预期结果">
+            <outline text="提示文本完整显示，无重叠或生硬截断"/>
+            <outline text="UI 支持自动换行或省略号显示"/>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="闭环路径验证 [经验补遗]">
+        <outline text="TC-10: 开启 - 关闭完整流程">
+          <outline text="前置条件">
+            <outline text="手机处于系统设置页面"/>
+            <outline text="当前系统主题为浅色模式"/>
+          </outline>
+          <outline text="操作步骤">
+            <outline text="[点击] 开关 &quot;夜间模式&quot; (开启)"/>
+            <outline text="[断言] 主题变为深色"/>
+            <outline text="[点击] 开关 &quot;夜间模式&quot; (关闭)"/>
+            <outline text="[断言] 主题恢复浅色"/>
+          </outline>
+          <outline text="预期结果">
+            <outline text="开启和关闭操作均可正常执行"/>
+            <outline text="主题切换可逆，无残留状态"/>
+          </outline>
+        </outline>
+        <outline text="TC-11: 多次切换后状态正确">
+          <outline text="前置条件">
+            <outline text="手机处于系统设置页面"/>
+          </outline>
+          <outline text="操作步骤">
+            <outline text="[点击] 开关 &quot;夜间模式&quot; (开启)"/>
+            <outline text="[点击] 开关 &quot;夜间模式&quot; (关闭)"/>
+            <outline text="[点击] 开关 &quot;夜间模式&quot; (开启)"/>
+            <outline text="[点击] 开关 &quot;夜间模式&quot; (关闭)"/>
+          </outline>
+          <outline text="预期结果">
+            <outline text="每次切换后主题状态正确"/>
+            <outline text="无状态累积或逻辑错误"/>
+          </outline>
+        </outline>
+      </outline>
+    </outline>
+  </body>
+</opml>
